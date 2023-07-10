@@ -4,38 +4,32 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
   <title>Michail Mastoros CV</title>
+  <link rel="icon" href="favicon.ico">
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
   <link rel="icon" type="image/png" href="img/logoKefalosTech.ico">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
   <link rel="stylesheet" type="text/css" href="new.css">
 </head>
 <body>
   <header>
-    <div class="menu">
-      <ul>
-        <li><a href="index.html" class="out">CV</a></li>
-        <li><a href="services.html" class="out">Services</a></li>
-      </ul>
-    </div>
-  </header>
-  <header>
     <div class="dark-mode-switch">
       <input type="checkbox" id="dark-mode-toggle">
       <label for="dark-mode-toggle"></label>
-    </div>
-    <img id="profile-photo" src="profile.jpg" alt="Profile Photo">
+    </div>    
+    <img id="profile-photo" class="rounded-profile-photo" src="profile.jpg" alt="Profile Photo">
     <h1>Michail Mastoros</h1>
     <p>Software Developer</p>
-    <a class="download-button" href="CV.pdf" download="Michail_Mastoros_CV.pdf">Download CV PDF</a>
   </header>
   <main>
     <div class="section-buttons">
-      <button data-section="about"><i class="far fa-address-card"></i></button>
-      <button data-section="skills"><i class="fas fa-cogs"></i></button>
-      <button data-section="projects"><i class="fas fa-folder-open"></i></button>
-      <button data-section="experience"><i class="fas fa-briefcase"></i></button>
-      <button data-section="education"><i class="fas fa-graduation-cap"></i></button>
-      <button data-section="contact"><i class="fas fa-envelope-open-text"></i></button>
+      <button class="section-button" data-section="about"><i class="far fa-address-card"></i></button>
+      <button class="section-button" data-section="skills"><i class="fas fa-cogs"></i></button>
+      <button class="section-button" data-section="projects"><i class="fas fa-folder-open"></i></button>
+      <button class="section-button" data-section="experience"><i class="fas fa-briefcase"></i></button>
+      <button class="section-button" data-section="education"><i class="fas fa-graduation-cap"></i></button>
+      <button class="section-button" data-section="contact"><i class="fas fa-envelope-open-text"></i></button>      
     </div>
+    <a class="download-button" href="CV.pdf" download="Michail_Mastoros_CV.pdf">Download CV PDF</a>
     <section id="about" class="content-section">
       <h2>About Me</h2>
       <p>Born in 2002, Currently residing in Thessaloniki Greece, awaiting the final results of my BSc in Computer Science from Bolton University through New York College Thessaloniki.</p>
@@ -44,14 +38,13 @@
       <h2>Skills</h2>
       <ul>
         <li>C#</li>
-        <li>MySQL, SQL</li>
+        <li>SQL, MySQL</li>
         <li>HTML & CSS</li>
         <li>.NET</li>
         <li>Bash</li>
         <li>Javascript</li>
         <li>Agile Methodologies</li>
         <li>Python</li>
-        <li>PHP</li>
         <li>Currently learning Kotlin and XML</li>
       </ul>
     </section>
@@ -81,8 +74,12 @@
     <section id="experience" class="content-section">
       <h2>Work Experience</h2>
       <div class="experience-item">
-        <h3>IT Support Technician</h3>
-        <p>New York College, May 2023 - July 2023 (expected)</p>
+        <h3>Exam Invigilator (Part-time)</h3>
+        <p>PASS, June 2023 - July 2023</p>
+      </div>
+      <div class="experience-item">
+        <h3>IT Support Technician (Part-time)</h3>
+        <p>New York College, May 2023 - July 2023</p>
       </div>
       <div class="experience-item">
         <h3>IT Support and Hardware Technician</h3>

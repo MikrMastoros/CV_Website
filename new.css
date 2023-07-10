@@ -1,256 +1,262 @@
-/* Reset default styles */
-html, body, ul {
-  margin: 0;
-  padding: 0;
-}
-
 body {
-  font-family: Arial, sans-serif;
-  background-color: #ffffff;
-  color: #000000;
+  font-family: 'Roboto', sans-serif;
+  color: #444;
+  background-color: #F5F5F5;
   line-height: 1.6;
-  transition: background-color 0.3s, color 0.3s;
-}
-
-body.dark-mode {
-  background-color: #000000;
-  color: #fff;
+  padding: 1em;
+  margin-bottom: 80px;
 }
 
 header {
-  background-color: #ffffff;
-  padding: 20px;
-  text-align: center;
-}
-
-header.dark-mode {
-  background-color: #000000;
-}
-
-.menu ul {
-  list-style-type: none;
-  margin: 0;
-  padding: 0;
   display: flex;
-  justify-content: center;
-}
-
-.menu li {
-  margin: 0 10px;
-}
-
-.menu a {
-  color: #000000;
-  text-decoration: none;
-  padding: 10px;
-}
-
-.menu a.dark-mode {
-  color: #ffffff;
-}
-
-.dark-mode-switch {
-  text-align: right;
-  padding: 10px;
-}
-
-.dark-mode-switch label {
-  position: relative;
-  display: inline-block;
-  width: 40px;
-  height: 20px;
-  background-color: #d31313;
-  border-radius: 20px;
-  transition: background-color 0.3s;
-}
-
-.dark-mode-switch label.dark-mode {
-  background-color: #ccc;
-}
-
-.dark-mode-switch label::after {
-  content: '';
-  position: absolute;
-  width: 16px;
-  height: 16px;
-  border-radius: 50%;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1em;
   background-color: #fff;
-  top: 2px;
-  left: 2px;
-  transition: transform 0.3s;
+  box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
+  margin-bottom: 2em;
 }
 
-.dark-mode-switch label.dark-mode::after {
-  background-color: #333;
-  transform: translateX(20px);
+/* Styles for the toggle container */
+.dark-mode-switch {
+  display: inline-block;
 }
 
+/* Hide the original checkbox */
 .dark-mode-switch input[type="checkbox"] {
   display: none;
 }
 
+/* Styles for the toggle switch */
+.dark-mode-switch label {
+  display: block;
+  width: 40px;
+  height: 20px;
+  background-color: #ddd;
+  border-radius: 20px;
+  position: relative;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+/* Styles for the toggle switch when toggled on */
 .dark-mode-switch input[type="checkbox"]:checked + label {
-  background-color: #333;
+  background-color: #6b6bff;
 }
 
+/* Styles for the toggle handle */
+.dark-mode-switch label::after {
+  content: "";
+  position: absolute;
+  top: 2px;
+  left: 2px;
+  width: 16px;
+  height: 16px;
+  background-color: #fff;
+  border-radius: 50%;
+  transition: left 0.3s ease;
+}
+
+/* Styles for the toggle handle when toggled on */
 .dark-mode-switch input[type="checkbox"]:checked + label::after {
-  transform: translateX(20px);
+  left: calc(100% - 18px);
 }
 
-#profile-photo {
+/* Optional: Add a box shadow to the toggle switch */
+.dark-mode-switch label {
+  box-shadow: 0 0 4px rgba(0, 0, 0, 0.3);
+}
+
+body.dark-mode {
+  background-color: #333;
+  color: #f9f9f9;
+}
+
+body.dark-mode header,
+body.dark-mode footer,
+body.dark-mode section {
+  background-color: #222;
+  box-shadow: none;
+}
+
+body.dark-mode button {
+  color: #f9f9f9;
+  background-color: #3498db;
+}
+
+body.dark-mode .section-button {
+  background-color: #f9f9f9;
+  color: #333;
+}
+
+body.dark-mode .section-button:hover {
+  background-color: #ddd;
+}
+
+body.dark-mode h1,
+body.dark-mode h2,
+body.dark-mode h3,
+body.dark-mode p,
+body.dark-mode li,
+body.dark-mode a {
+  color: #f9f9f9;
+}
+
+h1,
+h2 {
+  color: #333;
+}
+
+h1 {
+  font-size: 2em;
+}
+
+h2 {
+  font-size: 1.5em;
+  margin-bottom: 0.75em;
+}
+
+.menu ul {
+  list-style: none;
+  padding: 0;
+}
+
+.menu li {
+  display: inline;
+  margin-right: 1em;
+}
+
+.menu a {
+  color: #333;
+  text-decoration: none;
+}
+
+.rounded-profile-photo {
   width: 150px;
   height: 150px;
   border-radius: 50%;
-  margin: 20px auto;
-  display: block;
   object-fit: cover;
-  transition: filter 0.3s;
 }
 
-#profile-photo.dark-mode {
-  filter: brightness(70%);
-}
-
-h1, p {
-  text-align: center;
-  color: #000000;
-  transition: color 0.3s;
-}
-
-h1.dark-mode,
-p.dark-mode {
-  color: #ffffff;
-}
-
-.download-button, .fallback-link {
-  display: block;
-  text-align: center;
-  margin: 20px auto;
-  width: 200px;
-  padding: 10px;
-  background-color: #000000;
-  color: #03ff24;
-  text-decoration: none;
+section {
+  margin: 2em 0;
+  background: #fff;
+  padding: 2em;
   border-radius: 5px;
-  transition: background-color 0.3s, color 0.3s;
+  box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
 }
 
-.download-button:hover, .fallback-link:hover {
-  background-color: #00ff4c;
-}
-
-.download-button.dark-mode,
-.fallback-link.dark-mode {
-  background-color: #fff;
-  color: #000000;
-}
-
-.download-button.dark-mode:hover,
-.fallback-link.dark-mode:hover {
-  background-color: #00ffc8;
-  color: #333; 
-}
-
-.section-buttons {
-  text-align: center;
-  margin-bottom: 20px;
-}
-
-.section-buttons button {
-  font-size: 20px;
-  margin: 5px;
-  padding: 10px;
-  background-color: #ffffff;
-  color: #000000;
+button {
+  background-color: #3498db;
+  color: white;
   border: none;
   border-radius: 5px;
+  padding: 0.5em 1em;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 1em;
+  margin: 0.5em;
   cursor: pointer;
-  transition: background-color 0.3s;
+  transition: background 0.3s;
 }
 
-.section-buttons button:hover {
-  background-color: #555;
-}
-
-.section-buttons button.dark-mode {
-  background-color: #222;
-  color: #fff;
-}
-
-.content-section {
-  display: none;
-  padding: 20px;
-  background-color: #fff;
-  color: #333; 
-  transition: background-color 0.3s, color 0.3s;
-}
-
-.content-section.dark-mode {
-  background-color: #000000;
-  color: #fff;
-}
-
-/* Additional Styles for Dark Mode */
-body.dark-mode header,
-body.dark-mode .section-buttons button {
-  background-color: #000000;
-  color: #fff;
-}
-
-body.dark-mode #profile-photo {
-  filter: brightness(70%);
-}
-
-body.dark-mode .download-button,
-body.dark-mode .fallback-link {
-  background-color: #fff;
-  color: #000000;
-}
-
-body.dark-mode .download-button:hover,
-body.dark-mode .fallback-link:hover {
-  background-color: #00ffc8;
-  color: #333; 
-}
-
-body.dark-mode .content-section {
-  background-color: #000000;
-  color: #fff;
-}
-
-body.dark-mode .project h3,
-body.dark-mode .experience-item p,
-body.dark-mode .education-item p {
-  color: #fff;
+button:hover {
+  background-color: #2980b9;
 }
 
 footer {
-  background-color: #ffffff;
-  padding: 20px;
-  color: #000000;
   text-align: center;
-  transition: background-color 0.3s, color 0.3s;
-}
-
-footer.dark-mode {
-  background-color: #000000;
-}
-
-footer a {
-  color: #fff;
-  text-decoration: none;
-  margin: 0 5px;
+  padding: 1em;
+  background-color: #fff;
+  box-shadow: 0px -2px 5px rgba(0, 0, 0, 0.1);
+  position: fixed;
+  bottom: 0;
+  width: 100%;
 }
 
 footer p {
-  margin-top: 10px;
-  color: #fff;
+  margin: 0.5em 0;
 }
 
-#about p {
-  color: #000000;
+footer a {
+  margin: 0 1em;
+  color: #333;
+  text-decoration: none;
 }
 
-#about p.dark-mode {
+footer a:hover {
+  color: #3498db;
+}
+
+footer i {
+  font-size: 24px;
+  transition: color 0.3s ease;
+}
+
+footer i:hover {
+  color: #3498db;
+}
+
+.download-button {
+  display: inline-block;
+  font-size: 1.1em;
+  text-align: center;
   color: #fff;
+  background-color: #3498db;
+  padding: 15px 30px;
+  border-radius: 5px;
+  text-decoration: none;
+  margin-top: 2em;
+  transition: background-color 0.3s ease;
+}
+
+.download-button:hover {
+  background-color: #2980b9;
+}
+
+/* Responsive Styles */
+
+/* Small devices (portrait phones, less than 600px) */
+@media only screen and (max-width: 600px) {
+  header {
+    padding: 0.5em;
+    margin-bottom: 1em;
+  }
+
+  h1 {
+    font-size: 1.5em;
+  }
+
+  h2 {
+    font-size: 1.2em;
+    margin-bottom: 0.5em;
+  }
+
+  section {
+    padding: 1em;
+  }
+
+  .download-button {
+    font-size: 0.9em;
+    padding: 10px 20px;
+    margin-top: 1em;
+  }
+}
+
+/* Medium devices (landscape phones and tablets, 600px and up) */
+@media only screen and (min-width: 600px) {
+  .download-button {
+    font-size: 1em;
+    padding: 10px 20px;
+    margin-top: 1em;
+  }
+}
+
+/* Large devices (laptops/desktops, 992px and up) */
+@media only screen and (min-width: 992px) {
+  .download-button {
+    font-size: 1.2em;
+    padding: 20px 40px;
+    margin-top: 2em;
+  }
 }

@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+  <title>Services</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+  <script src="https://kit.fontawesome.com/c5c47037fe.js" crossorigin="anonymous"></script>
+  <link rel="stylesheet" type="text/css" href="new.css">
+</head>
+<body>
+
+  <header>
+    <div class="menu">
+      <ul>
+        <li><a href="index.html" class="out">CV</a></li>
+        <li><a href="services.html" class="out">Services</a></li>
+      </ul>
+    </div>
+  </header>
+  
+  <header>
+    <div class="dark-mode-switch">
+      <input type="checkbox" id="dark-mode-toggle">
+      <label for="dark-mode-toggle"></label>
+    </div>
+    <img id="profile-photo" src="profile.jpg" alt="Profile Photo">
+    <h1>Michail Mastoros</h1>
+    <p>Software Developer</p>
+    <a class="download-button" href="CV.pdf" download="Michail_Mastoros_CV.pdf">Download CV PDF</a>
+  </header>
+  <main>
+    <div class="section-buttons">
+      <button data-section="Code Solutions"><i class="fa-solid fa-laptop-code"></i></button>
+      <button data-section="Customized Websites"><i class="fa-solid fa-window-maximize"></i></button>
+      <button data-section="projects"><i class="fas fa-folder-open"></i></button>          
+      <button data-section="experience"><i class="fas fa-briefcase"></i></button>  
+      <button data-section="education"><i class="fas fa-graduation-cap"></i></button>     
+      <button data-section="contact"><i class="fas fa-envelope-open-text"></i></button>     
+    </div>
+    <section id="Code Solutions" class="content-section">
+      <h2>Code Solutions</h2>
+      <p>Contact me for specialized programs fited to your unique needs</p>
+    </section>
+    <section id="Customized Websites" class="content-section">
+      <h2>Customized Websites</h2>
+      <ul>
+        <li>Customized Websites, with low hosting costs as well as higher end options with very high up-times</li>
+      </ul>
+    </section>
+    <section id="projects" class="content-section">
+      <h2>Projects</h2>
+      <div class="project">
+        <h3>Lightweight Hotel Management System</h3>
+        <p>Technologies: C#, MySQL</p>
+        <a href="https://github.com/MikrMastoros/HotelManagementMichail" target="_blank" rel="noopener noreferrer">GitHub Repository</a>
+      </div>
+      <div class="project">
+        <h3>OpenSourceLibrary</h3>
+        <p>Technologies: Python</p>
+        <a href="https://github.com/MikrMastoros/SecureApplicationDevelopment" target="_blank" rel="noopener noreferrer">GitHub Repository</a>
+      </div>
+      <div class="project">
+        <h3>Secure Login Page</h3>
+        <p>Technologies: C#, XAML</p>
+        <a href="https://github.com/MikrMastoros/SecureApplicationDevelopment" target="_blank" rel="noopener noreferrer">GitHub Repository</a>
+      </div>
+      <div class="project">
+        <h3>Simple English Lessons Website</h3>
+        <p>Technologies: HTML & CSS</p>
+        <a href="https://github.com/MikrMastoros/English-Lessons-html" target="_blank" rel="noopener noreferrer">GitHub Repository</a>
+      </div>
+    </section>
+    <section id="experience" class="content-section">
+      <h2>Work Experience</h2>
+      <div class="experience-item">
+        <h3>IT Support Technician</h3>
+        <p>New York College, May 2023 - July 2023 (expected)</p>
+      </div>
+      <div class="experience-item">
+        <h3>IT Support and Hardware Technician</h3>
+        <p>XSOLUTION, May 2022 - September 2022</p>
+        <p>Gained Experience in the field of IT, including networking,
+          computer hardware and software repair as well as IT services
+          for big Hotels and local businesses, also gained experience in cashier machine and Restaurant ordering system maintenance and installation.</p>
+      </div>
+    </section>
+    <section id="education" class="content-section">
+      <h2>Education</h2>
+      <div class="education-item">
+        <h3>BSc (Hons) in Computer Science</h3>
+        <p>University of Bolton through NYC, July 2023 (expected)</p>
+      </div>
+      <div class="education-item">
+        <h3>Studies of Economics and IT</h3>
+        <p>General High School of Andimachia/Kos, 2017 - 2020</p>
+        <p>GPA 4.0</p>
+      </div>
+      <div class="education-item">
+        <h3>State Certificate</h3>
+        <p>German B1, 2017</p>
+      </div>
+      <div class="education-item">
+        <h3>Proficienct in English, C2</h3>
+        <p>University of Michigan, 2016</p>
+      </div>
+    </section>
+    <section id="contact" class="content-section">
+      <h2>Contact Me</h2>
+      <form action="https://formspree.io/f/xyyaroyg" method="POST">
+        <input type="text" name="name" placeholder="Name">
+        <input type="email" name="_replyto" placeholder="Email">
+        <textarea name="message" placeholder="Message"></textarea>
+        <button type="submit">Submit</button>
+      </form>
+    </section>
+  </main>
+  <footer>
+    <div>
+      <a href="https://www.facebook.com/mike.mastoros.7" target="_blank" rel="noopener noreferrer"><i class="fab fa-facebook fa-2x" style="color: #347af4;"></i></a>
+      <a href="https://twitter.com/MikeMastoros" target="_blank" rel="noopener noreferrer"><i class="fab fa-twitter fa-2x" style="color: #5594ff;"></i></a>
+      <a href="https://www.linkedin.com/in/michail-mastoros-9b74791ba" target="_blank" rel="noopener noreferrer"><i class="fab fa-linkedin fa-2x" style="color: #347af4;"></i></a>
+    </div>
+    <p>&copy; 2023 Michail Mastoros</p>
+  </footer>
+  <script src="/js/script.js"></script>
+</body>
+</html>
